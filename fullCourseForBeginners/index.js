@@ -225,6 +225,31 @@ console.log(convertIntegers1('346'))
 
 
 const x = 230
-console.log(x.toString(8))  
+console.log(x.toString(8))
 
 
+const array = [-5.6, 5, 3.6, -8, 6, 8.65, -0.5, 8, 0]
+
+const squareList = (arr) => {
+  const squareIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x)
+
+  return squareIntegers
+}
+const squaredIntegers = squareList(array)
+console.log(squaredIntegers)                                 //[25, 36, 64]   ընտիր բան
+
+
+const sum = (function () {
+
+  return function (...args) {
+
+    return args.reduce((a, b) => a + b, 5)
+  }
+})()
+ console.log(sum(1,2,3))         // if 5 is in reduce returns 11 else if 5 isnt in reduce , returns 6
+
+
+
+
+
+ //Date()
